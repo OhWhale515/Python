@@ -5,3 +5,5 @@ except ValueError:
     print('You did not provide a number, so I will not calculate the inverse')
 except ZeroDivisionError:
     print('You provide 0 and division by 0 is not possible, sorry')
+except:
+    print('Something strange happened here, sorry')
