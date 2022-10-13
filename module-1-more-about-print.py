@@ -1,0 +1,7 @@
+print("I'm studying python" )
+print('I\'m studying python')
+print('and having fun')
+print()
+print('python is so cool' ,'and amazing')
+print()
+print('I\'m learning to become a Python developer!\nI\'m so excited!')
