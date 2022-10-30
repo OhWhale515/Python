@@ -14,7 +14,7 @@
       "editor.cursorStyle": "block-outline",
       "window.zoomLevel": 1,
       "terminal.external.linuxExec": "iterm",
-      "terminal.integrated.fontSize": 20,
+      "terminal.integrated.fontSize": 12,
       "workbench.iconTheme": "bearded-icons",
     "editor.wordWrap": "on",
     "git.confirmSync": false,
