@@ -19,7 +19,7 @@ def generate_password():
 
     print(password)
 
-option = input("Do you wanna generate a new  password? (Yes/No)")
+option = input("Do you wanna generate a new password? (Yes/No)")
 
 if option == "Yes":
     generate_password()
