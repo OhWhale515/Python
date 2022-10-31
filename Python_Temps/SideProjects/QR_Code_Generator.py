@@ -13,6 +13,6 @@ def generate_qrcode(text):
     img = qr.make_image(fill_color="black", back_color="white")
     img.save("qrimg001.png")
 
-url = input("https://www.linkedin.com/in/sterling-green-59865b63/: ")
+url = input("Whats ya url fam?: ")
 generate_qrcode(url)
 
