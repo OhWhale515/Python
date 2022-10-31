@@ -19,12 +19,12 @@ def generate_password():
 
     print(password)
 
-option = input("Do you wanna generate a new password? (Yes/No)")
+option = input("Do you wanna generate a new password? (Yes/No): ")
 
 if option == "Yes":
     generate_password()
 elif option == "No":
-    print("Ya done")
+    print("Peace")
     quit()
 else:
     print("Invalid input man, its either Yes or No...Dang ")
