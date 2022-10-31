@@ -11,7 +11,8 @@ def generate_qrcode(text):
     qr.add_data(text)
     qr.make(fit=True)
     img = qr.make_image(fill_color="black", back_color="white")
-    img.save("qrimg.png")
+    img.save("qrimg001.png")
 
-generate_qrcode("https://www.linkedin.com/in/sterling-green-59865b63/")
+url = input("https://www.linkedin.com/in/sterling-green-59865b63/: ")
+generate_qrcode(url)
 
