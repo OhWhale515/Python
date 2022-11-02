@@ -1,16 +1,22 @@
 import json
 import boto3
+
 def lambda_handler(event, context):
     s3 = boto3.client('s3')
+    # TODO implement
+    print('Here Is The s3 buckets!')
+    
+    response = s3.list_buckets()
 
-    if event:
-        print("Event : ", event)
-        file_obj = event["Records"][0]
-        filename = str(file_obj[s3]['object']['key'])
-        print("Filename: ", filename)
-        fileObj = s3.get_object(Bucket = "aws-lambda-trigger", Key=filename)
-        file_content = fileObj["Body"].read().decode('utf-8')
-        print(file_content)
-
-
-    return "Thank you bruh"
+    bucket_names = []
+    buckets = response["Buckets"]
+    
+    for bucket in buckets:
+        print(bucket["Name"])
+        bucket_names.append(bucket["Name"])
+    
+    
+    return {
+        'body': json.dumps(bucket["Name"])
+        
+    }
