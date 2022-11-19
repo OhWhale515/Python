@@ -2,14 +2,14 @@ from email.message import EmailMessage
 import ssl
 import smtplib
 
-email_sender = 'sterlinggreen515@gmail.com'
-email_password ='**********'
+email_sender = 'Enter Email Here'
+email_password ='*****email password'
 
-email_receiver = 'slimjrbeatz@gmail.com'
+email_receiver = 'Receiver Email'
 
-subject = "Yuuuuur"
+subject = "Subject:"
 body = """
-Yuuurr u certified now bro!!!
+Add Msg
 """
 
 
