@@ -3,7 +3,7 @@ import ssl
 import smtplib
 
 email_sender = 'Enter Email Here'
-email_password ='*****email password'
+email_password ='**email password**'
 
 email_receiver = 'Receiver Email'
 
