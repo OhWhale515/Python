@@ -13,7 +13,7 @@ def step_impl(context):
     context.driver.get("https://opensource-demo.orangehrmlive.com/")
 
 
-@when(u'Enter username "{user}" and password "{pwd}"')
+@when(u'Enter username "admin" and password "admin123"')
 def step_impl(context,user,pwd):
     context.driver.find_element_by_id("txtUsername").send_keys(user)
     context.driver.find_element_by_id("txtPassword").send_keys(pwd)
