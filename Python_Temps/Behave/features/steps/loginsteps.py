@@ -4,24 +4,29 @@ from selenium import webdriver
 
 @given(u'I launch Chrome browser')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: Given I launch Chrome browser')
+    context.driver=webdriver.Chrome()
 
+    
 
 @when(u'I open orange HRM Homepage')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: When I open orange HRM Homepage')
+    context.driver.get("https://opensource-demo.orangehrmlive.com/")
 
 
-@when(u'Enter username "admin" and password "admin123"')
-def step_impl(context):
-    raise NotImplementedError(u'STEP: When Enter username "admin" and password "admin123"')
+@when(u'Enter username "{user}" and password "{pwd}"')
+def step_impl(context,user,pwd):
+    context.driver.find_element_by_name("username").send_keys(user)
+    context.driver.find_element_by_name("password").send_keys(pwd)
+
+
+    
 
 
 @when(u'Click on login button')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: When Click on login button')
+    
 
 
 @then(u'User must sucessfully login to the Dashboard page')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: Then User must sucessfully login to the Dashboard page')
+    
