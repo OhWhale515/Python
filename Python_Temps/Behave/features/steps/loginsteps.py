@@ -14,9 +14,9 @@ def step_impl(context):
 
 
 @when(u'Enter username "admin" and password "admin123"')
-def step_impl(context,user,pwd):
-    context.driver.find_element_by_id("txtUsername").send_keys(user)
-    context.driver.find_element_by_id("txtPassword").send_keys(pwd)
+def step_impl(context,admin,admin123):
+    context.driver.find_element_by_id("//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/form[1]/div[1]/div[1]/div[2]/input[1]").send_keys(admin)
+    context.driver.find_element_by_id("//body/div[@id='app']/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/form[1]/div[2]/div[1]/div[2]/input[1]").send_keys(admin123)
 
 
     

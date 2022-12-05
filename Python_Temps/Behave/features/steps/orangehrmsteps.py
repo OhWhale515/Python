@@ -15,7 +15,7 @@ def openHomepage(context):
 
 @then(u'verify that the Logo present on page')
 def verifyLogo(context):
-    status=context.driver.find_element_by_xpath("https://opensource-demo.orangehrmlive.com/web/images/ohrm_branding.png?1666596668857").is_displayed()
+    status=context.driver.find_element_by_src("/web/images/ohrm_branding.png?1666596668857" alt="company-branding").is_displayed()
     assert status is True
 
 
