@@ -15,8 +15,8 @@ def step_impl(context):
 
 @when(u'Enter username "{user}" and password "{pwd}"')
 def step_impl(context,user,pwd):
-    context.driver.find_element_by_name("username").send_keys(user)
-    context.driver.find_element_by_name("password").send_keys(pwd)
+    context.driver.find_element_by_id("txtUsername").send_keys(user)
+    context.driver.find_element_by_id("txtPassword").send_keys(pwd)
 
 
     
@@ -24,9 +24,14 @@ def step_impl(context,user,pwd):
 
 @when(u'Click on login button')
 def step_impl(context):
+    context.driver.find_element_by_id("btnLogin").click()
+
     
 
 
 @then(u'User must sucessfully login to the Dashboard page')
 def step_impl(context):
+    text=context.driver.find_element_by_xpath("//h1[contains(text(),'Dashboard')]").text()
+    assert text=="Dashboard"
+    context.driver.close()
     
