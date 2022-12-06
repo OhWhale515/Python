@@ -1,8 +1,8 @@
 class Question:
 
-    def __init__(self, q_text, q_answer): 
-        self.text = q_text
-        self.answer = q_answer
+    def __init__(self, question_text, question_answer): 
+        self.text = question_text
+        self.answer = question_answer
 
-new_q = Question()
-new_q.text
+# new_question = Question()
+# new_question.text
