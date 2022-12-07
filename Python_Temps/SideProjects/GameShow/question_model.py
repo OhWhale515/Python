@@ -4,5 +4,5 @@ class Question:
         self.text = question_text
         self.answer = question_answer
 
-# new_question = Question()
-# new_question.text
+new_question = Question()
+new_question.text
