@@ -1,5 +1,9 @@
 def add(*args):
-    print(type(args))
+    sum = 0
+    # print(type(args))
+    for n in args:
+        sum += n
+    return sum
+  
 
-
-add(3, 5, 6)
+print(add(3, 5, 6))
