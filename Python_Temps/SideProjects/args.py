@@ -6,4 +6,12 @@ def add(*args):
     return sum
   
 
-print(add(3, 5, 6))
+# print(add(3, 5, 6, 2, 1, 7, 4, 3,))
+
+def calculate(**kwargs):
+    print(kwargs)
+
+    print(kwargs["add"])
+
+
+calculate(add=3, multiply=5)
