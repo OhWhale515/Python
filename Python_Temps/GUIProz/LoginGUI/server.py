@@ -19,9 +19,15 @@ def handle_connection(c):
     conn = sqlite3.connect("userdata.db")
     cur = conn.cursor
     
-    cur.execute("SELECT * FROM userdata WHERE username = ? AND password = ?", username, password)
+    cur.execute("SELECT * FROM userdata WHERE username = ? AND password = ?", (username, password))
     
     if cur.fetchall():
         c.send("Login successful!".encode())
     else:
         c.send("Login failed!".encode())
+        
+        
+while True:
+    client, addr = server.accept()
+    threading.Thread(target=handle_connection, args=(client,)).start()
+    

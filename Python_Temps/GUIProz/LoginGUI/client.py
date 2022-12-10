@@ -7,3 +7,5 @@ message = client.recv(1024).decode()
 client.send(input(message).encode())
 message = client.recv(1024).decode()
 client.send(input(message).encode())
+
+print(client.recv(1024).decode())
