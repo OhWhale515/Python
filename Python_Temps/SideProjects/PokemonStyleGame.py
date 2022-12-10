@@ -59,4 +59,74 @@ class Trainer:
         my_pokemon.attack(their_pokemon)
         
         if their_pokemon.is_knocked_out:
-            print(f'{their_pokemon.name} is knocked
+            print(f'{their_pokemon.name} is knocked out!')
+            other_trainer.choice
+
+    def switch_pokemon(self, new_pokemon):
+        if self.pokemon_list[new_pokemon].is_knocked_out:
+            print(f'{self.pokemon_list[new_pokemon].name} is knocked out and cannot be switched in!')
+            return
+        
+        if self.current_pokemon == new_pokemon:
+            print(f'{self.pokemon_list[new_pokemon].name} is already in battle!')
+            return
+        
+        self.current_pokemon = new_pokemon
+        print(f'{self.name} switched to {self.pokemon_list[self.current_pokemon].name}!')
+
+pikachu = Pokemon('Pikachu', 5, 'electric')
+charmander = Pokemon('Charmander', 5, 'fire')
+bulbasaur = Pokemon('Bulbasaur', 5, 'grass')
+squirtle = Pokemon('Squirtle', 5, 'water')
+
+ash = Trainer('Ash', [pikachu, charmander, bulbasaur, squirtle], 10)
+misty = Trainer('Misty', [pikachu, charmander, bulbasaur, squirtle], 10)
+
+ash.attack(misty)
+misty.attack(ash)
+
+ash.use_potion()
+misty.use_potion()
+
+ash.switch_pokemon(2)
+misty.switch_pokemon(3)
+
+ash.attack(misty)
+misty.attack(ash)
+
+
+    def choose_pokemon(self):
+        print(f'{self.name} has the following Pokemon:')
+        for i in range(len(self.pokemon_list)):
+            print(f'{i + 1}. {self.pokemon_list[i].name}')
+        
+        choice = int(input('Choose a Pokemon: ')) - 1
+        if choice < 0 or choice >= len(self.pokemon_list):
+            print('Invalid choice!')
+            return
+        
+        self.switch_pokemon(choice)
+
+pikachu = Pokemon('Pikachu', 5, 'electric')
+charmander = Pokemon('Charmander', 5, 'fire')
+bulbasaur = Pokemon('Bulbasaur', 5, 'grass')
+squirtle = Pokemon('Squirtle', 5, 'water')
+
+ash = Trainer('Ash', [pikachu, charmander, bulbasaur, squirtle], 10)
+misty = Trainer('Misty', [pikachu, charmander, bulbasaur, squirtle], 10)
+
+ash.attack(misty)
+misty.attack(ash)
+
+ash.use_potion()
+misty.use_potion()
+
+ash.switch_pokemon(2)
+misty.switch_pokemon(3)
+
+ash.attack(misty)
+misty.attack(ash)
+
+ash.choose_pokemon()
+misty.choose_pokemon()
+
